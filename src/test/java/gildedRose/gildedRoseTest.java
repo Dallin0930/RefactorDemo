@@ -105,7 +105,27 @@ public class gildedRoseTest {
     assertEquals(50,items[0].quality);
   }
 
-  
+  @Test
+  public void should_return_negative1_and_50_when_sellin_is_negative1_and_quality_is_51_name_is_Aged_Brie(){
+    Item item = new Item("Aged Brie",1,51);
+    Item[] items = new Item[]{item};
+    GildedRose gildedRose = new GildedRose(items);
+    gildedRose.updateQuality();
+    assertEquals(1,items[0].sellIn);
+    assertEquals(51,items[0].quality);
+  }
+
+  @Test
+  public void should_return_negative1_and_50_when_sellin_is_1_and_quality_is_49_name_is_Aged_Brie(){
+    Item item = new Item("Aged Brie",1,49);
+    Item[] items = new Item[]{item};
+    GildedRose gildedRose = new GildedRose(items);
+    gildedRose.updateQuality();
+    assertEquals(1,items[0].sellIn);
+    assertEquals(49,items[0].quality);
+  }
+
+
 
 
 
