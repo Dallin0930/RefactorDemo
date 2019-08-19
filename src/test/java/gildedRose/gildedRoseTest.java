@@ -65,6 +65,26 @@ public class gildedRoseTest {
     assertEquals(51,items[0].quality);
   }
 
+  @Test
+  public void should_return_7_and_51_when_sellin_is_5_and_quality_is_51_name_is_Backstage_passes_to_a_TAFKAL80ETC_concert(){
+    Item item = new Item("Backstage passes to a TAFKAL80ETC concert",5,51);
+    Item[] items = new Item[]{item};
+    GildedRose gildedRose = new GildedRose(items);
+    gildedRose.updateQuality();
+    assertEquals(5,items[0].sellIn);
+    assertEquals(51,items[0].quality);
+  }
+
+  @Test
+  public void should_return_7_and_51_when_sellin_is_7_and_quality_is_49_name_is_Backstage_passes_to_a_TAFKAL80ETC_concert(){
+    Item item = new Item("Backstage passes to a TAFKAL80ETC concert",7,49);
+    Item[] items = new Item[]{item};
+    GildedRose gildedRose = new GildedRose(items);
+    gildedRose.updateQuality();
+    assertEquals(7,items[0].sellIn);
+    assertEquals(49,items[0].quality);
+  }
+
 
 
 }
