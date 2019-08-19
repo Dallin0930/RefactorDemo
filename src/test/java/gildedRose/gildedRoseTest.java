@@ -25,16 +25,25 @@ public class gildedRoseTest {
     assertEquals(13,items[0].quality);
   }
 
+  @Test
+  public void should_return_10_and_25_when_sellin_is_no_more_than0_and_quality_is_15_name_is_dallin(){
+    Item item = new Item("Dallin",-1,15);
+    Item[] items = new Item[]{item};
+    GildedRose gildedRose = new GildedRose(items);
+    gildedRose.updateQuality();
+    assertEquals(-2,items[0].sellIn);
+    assertEquals(13,items[0].quality);
+  }
 
-//  @Test
-//  public void should_return_10_and_25_when_sellin_is_10_and_quality_is_15_name_is_Backstage_passes_to_a_TAFKAL80ETC_concert(){
-//    Item item = new Item("Dallin",10,15);
-//    Item[] items = new Item[]{item};
-//    GildedRose gildedRose = new GildedRose(items);
-//    gildedRose.updateQuality();
-//    assertEquals(9,items[0].sellIn);
-//    assertEquals(14,items[0].quality);
-//  }
+  @Test
+  public void should_return_10_and_25_when_sellin_is_10_and_quality_is_15_name_is_Backstage_passes_to_a_TAFKAL80ETC_concert(){
+    Item item = new Item("Dallin",10,15);
+    Item[] items = new Item[]{item};
+    GildedRose gildedRose = new GildedRose(items);
+    gildedRose.updateQuality();
+    assertEquals(9,items[0].sellIn);
+    assertEquals(14,items[0].quality);
+  }
 
 
 
