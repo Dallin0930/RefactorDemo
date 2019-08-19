@@ -15,15 +15,15 @@ public class Item {
         this.quality = quality;
 
       if (this.name.equals("Aged Brie")) {
-        this.updateQuality=new Aged_UpdateQuality();
+        this.updateQuality=new AgedBrieQuality();
       }
       else if (this.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-        this.updateQuality=new Back_UpdateQuality();
+        this.updateQuality=new BackstageQuality();
       }
       else if (this.name.equals("Sulfuras, Hand of Ragnaros")) {
-        this.updateQuality=new Sul_UpdateQuality();
+        this.updateQuality=new SulfurasQuality();
       }else {
-        this.updateQuality=new Other_UpdateQuality();
+        this.updateQuality=new OtherStyleQuality();
       }
     }
 

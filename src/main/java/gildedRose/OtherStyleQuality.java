@@ -1,7 +1,6 @@
 package gildedRose;
 
-public class Back_UpdateQuality extends UpdateQuality {
-
+public class OtherStyleQuality extends UpdateQuality {
   @Override
   public void UpdateQuality(Item item) {
     item.sellIn--;

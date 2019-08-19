@@ -1,6 +1,6 @@
 package gildedRose;
 
-public class Sul_UpdateQuality extends UpdateQuality {
+public class SulfurasQuality extends UpdateQuality {
 
   @Override
   public void UpdateQuality(Item item) {
